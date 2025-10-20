@@ -1,4 +1,3 @@
-using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class ChessPiece : MonoBehaviour
@@ -44,5 +43,13 @@ public class ChessPiece : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void OnMouseDown()
+    {
+        if (engine != null)
+        {
+            engine.onPieceClicked(this);
+        }
     }
 }
